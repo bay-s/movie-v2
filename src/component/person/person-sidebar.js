@@ -51,7 +51,7 @@ alt="Image description"
       {
          person?.also_known_as?.map(name => {
             return(
-               <p className="txt-small has-text-grey-lighter py-1">{name}</p>
+               <p className="txt-small has-text-grey-lighter py-1" key={name}>{name}</p>
             )
          })
       }

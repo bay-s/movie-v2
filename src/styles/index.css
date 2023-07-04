@@ -105,7 +105,10 @@ html{
     /* background-color: hsl(240, 49%, 7%) !important; */
     color: white !important;
 }
-
+h1,h2,h3,h4{
+  color: white;
+}
+ 
 textarea {
   resize: none !important;
 }
@@ -265,6 +268,7 @@ body {
   padding: 7px 12px;
   background-color:rgba( 3,37,65, 1);
   cursor: pointer;
+  display: none;
 }
 
 .star-container{

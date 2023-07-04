@@ -6,10 +6,11 @@ const Network = ({data}) => {
         <p className="is-title">Networks : </p>
        {
         data?.networks?.map(network => {
+ 
   const img =  `https://image.tmdb.org/t/p/w300/${network?.logo_path}`
-
+ 
            return (
-               <figure className="thumbnail">
+               <figure className="thumbnail" key={network?.id}>
                <Image
   loader={() => img }
   src={img }

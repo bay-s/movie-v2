@@ -8,7 +8,7 @@ const CastHistoryCard = ({movies,year,type}) => {
               const job = type === 'movie' ? movie?.character : movie?.job
               const episodes = type  === 'tv' ? `(${movie?.episode_count} episode)...` : ''
                 return(
-            <ul className="is-flex align-start gap-2" key={index} >
+            <ul className="is-flex align-start gap-2" key={movie.id} >
                     <li>
                         <span className="txt-white txt-small">{year}</span>
                     </li>

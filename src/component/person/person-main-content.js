@@ -15,8 +15,7 @@ const PersonPageCenter = ({person}) => {
 
         const tvResult = await tv.json()
         const movieResult = await movie.json()
-  console.log(tvResult);
-  console.log(movieResult);
+ 
         setTvRole(tvResult)
         setMovieRole(movieResult )
     }

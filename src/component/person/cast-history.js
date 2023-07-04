@@ -3,8 +3,7 @@ import CastHistoryCard from "./cast-history-card";
 import CrewHistoryCard from "./crew-history-card";
 
 const CastHistory = ({data}) => {
-console.log(data.movie);
-console.log(data.tv);
+ 
 const [groupedMovies, setGroupedMovies] = useState([]);
 
 useEffect(() => {
