@@ -89,8 +89,8 @@ if(selectValue === 'stream'){
    
    
 <div className="is-flex justify-between align-center gap-3">
-<h3 className="is-title is-size-3 is-bold">Trailers</h3>
-<div class="select is-link">
+<h3 className="is-title is-size-3 is-bold txt-white">Trailers</h3>
+<div class="select is-primary select-menu">
   <select className="no-bg" onChange={handlerSelectValue}>
     <option value='stream'>Streaming</option>
     <option value='theatre'>In Theaters</option>

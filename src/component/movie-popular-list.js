@@ -20,7 +20,7 @@ return(
 <ul className="is-flex justify-between align-center gap-3">
     <li><h3 className="is-title is-size-3 is-bold">Popular</h3></li>
 <li>
-<div class="select is-link">
+<div class="select is-primary select-menu">
   <select className="no-bg" onChange={handlerSelectValue}>
     <option value='stream'>Streaming</option>
     <option value='theatre'>In Theaters</option>
