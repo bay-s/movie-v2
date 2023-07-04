@@ -20,7 +20,7 @@ useEffect(() => {
     console.log('SOMETHING WENT WRONG');
   }
  
-},[data.selectValue])
+},[ data])
 
 const displayRoleMovie = () => {
 

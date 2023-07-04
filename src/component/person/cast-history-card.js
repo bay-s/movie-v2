@@ -13,7 +13,7 @@ const CastHistoryCard = ({movies,year,type}) => {
                         <span className="txt-white txt-small">{year}</span>
                     </li>
                     <li className="is-flex flex-column">
-                        <Link href={`/movie/${movie.id}`} className="txt-white txt-small is-title">{title}</Link>
+                        <Link href={`/${type}/${movie.id}`} className="txt-white txt-small is-title">{title}</Link>
                         <span className="txt-small has-text-grey-light">
                            {episodes} as <strong className="txt-white px-2">{movie?.character}</strong></span>
                     </li>

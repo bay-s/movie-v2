@@ -3,10 +3,10 @@ import Link from "next/link"
 const CrewHistoryCard = ({movies,year}) => {
  
     return(
-            movies.map((movie, index) => {
+            movies.map(movie  => {
  
                 return(
-            <ul className="is-flex align-start gap-2" key={index} >
+            <ul className="is-flex align-start gap-2" key={movie?.id} >
                     <li>
                         <span className="txt-white txt-small">{year}</span>
                     </li>
