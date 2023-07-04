@@ -11,7 +11,7 @@ const LoadMore = ({page,setPage}) => {
     }
  
     return(
-    <div className="column my-3">
+      <div className="w-100 my-3">
       {
            value.isLoading ? <button className="button is-primary is-loading" disabled>Load More</button>
            : <button className="button is-primary" onClick={loadMorePage}>Load More</button>

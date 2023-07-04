@@ -17,9 +17,11 @@ const AnimePages = () => {
   const [selectValue,setSelectValue] = useState('tv')
 
     const getAnime = async () => {
-
-     const url = `https://api.themoviedb.org/3/discover/tv?api_key=0ccbee0a69447c2b1bd0090bf76b0358&language=en-US&sort_by=popularity.desc&page=${dataMovie.pageTv}&with_keywords=210024|222243https://api.themoviedb.org/3/discover/tv?api_key=0ccbee0a69447c2b1bd0090bf76b0358&with_genres=16`;
-
+      const api_key = process.env.NEXT_PUBLIC_API_KEY
+    //  const url = `https://api.themoviedb.org/3/discover/tv?api_key=0ccbee0a69447c2b1bd0090bf76b0358&language=en-US&sort_by=popularity.desc&page=${dataMovie.pageTv}&with_keywords=210024|222243https://api.themoviedb.org/3/discover/tv?api_key=0ccbee0a69447c2b1bd0090bf76b0358&with_genres=16`;
+    const url = `https://api.themoviedb.org/3/discover/tv?api_key=${api_key}&language=en-US&sort_by=popularity.desc&page=${dataMovie.pageTv}&with_keywords=210024|222243&with_genres=16
+    `;
+ 
      const urlMovie = `https://api.themoviedb.org/3/discover/movie?api_key=0ccbee0a69447c2b1bd0090bf76b0358&language=en-US&sort_by=popularity.desc&page=${dataMovie.pageMovie}&with_keywords=210024|222243`;
 
      try {

@@ -1,21 +1,18 @@
+import PersonPageCenter from "@/component/person/person-main-content";
+import PersonPageSidebar from "@/component/person/person-sidebar";
 
 const PersonPages = ({ person}) => {
  console.log(person);
     return(
-    <div className="container my-5">
+    <div className="container p-3">
 
-        <section className="columns is-multiline">
+<section className="columns is-multiline">
 
-<div className="column is-4 red">
+ <PersonPageSidebar person={person} />
+ <PersonPageCenter person={person} />
+ 
+</section>
 
-</div>
-
-<div className="column is-8 red">
-
-
-</div>
-
-        </section>
     </div>
     )
 }
@@ -26,7 +23,8 @@ export async function getServerSideProps(context){
     const {id} = context.query
  
     const getSinglePerson = async () => {
-        const person = await fetch(`https://api.themoviedb.org/3/person/${id}?api_key=0ccbee0a69447c2b1bd0090bf76b0358`)
+        const api_key = process.env.NEXT_PUBLIC_API_KEY
+        const person = await fetch(`https://api.themoviedb.org/3/person/${id}?api_key=${api_key}`)
 
         const personResult = await person.json()
         return personResult

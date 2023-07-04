@@ -1,5 +1,5 @@
 
-const SelectDataValue = ({setSelectValue}) => {
+const SelectDataValue = ({setSelectValue,type}) => {
 
     const handlerSelectValue = (e) => {
         const value = e.target.value
@@ -7,10 +7,10 @@ const SelectDataValue = ({setSelectValue}) => {
       }
      
     return(
-<div class="select is-primary">
+<div class="select is-primary select-menu">
   <select className="no-bg" onChange={handlerSelectValue}>
-    <option value='tv'>Today</option>
-    <option value='movie'>This Week</option>
+    <option value='tv'>{type === 'anime' ? "On Tv" : "Today"}</option>
+    <option value='movie'>{type === 'anime' ? "Movie" : "This Week"}</option>
   </select>
 </div>
     )

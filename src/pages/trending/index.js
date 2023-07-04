@@ -18,11 +18,11 @@ const TrendingPages = ( ) => {
 
    
   const getTrending = async () => {
- 
+    const api_key = process.env.NEXT_PUBLIC_API_KEY
  try {
-  const today = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=0ccbee0a69447c2b1bd0090bf76b0358&page=${dataMovie.pageTv}`)
+  const today = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${api_key}&page=${dataMovie.pageTv}`)
 
-  const weeks = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=0ccbee0a69447c2b1bd0090bf76b0358&page=${dataMovie.pageMovie}`)
+  const weeks = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${api_key}&page=${dataMovie.pageMovie}`)
 
   const result = await today.json()
   const resultWeek = await weeks.json()
@@ -50,7 +50,7 @@ value?.setIsLoading(false)
     <ul className="is-flex justify-between align-center">
       <li> <h3 className="is-title is-size-3 is-bold text-center">Trending Movies</h3></li>
        <li>
-       <SelectDataValue selectValue={selectValue} setSelectValue={setSelectValue} />
+       <SelectDataValue selectValue={selectValue} setSelectValue={setSelectValue} type='trending' />
        </li>
     </ul>
     {/* MOVIE LIST COLUMNS */}

@@ -172,8 +172,11 @@ textarea {
 }
 
 .fade{
-  animation: fadeIn 5s  !important;
- 
+  animation: fadeIn 500ms  !important;
+  -webkit-animation: fadeIn 1s !important;
+  -moz-animation: fadeIn 1s  !important;
+  -o-animation: fadeIn 1s  !important;
+  -ms-animation: fadeIn 1s   !important;
 }
 
 @keyframes fadeIn {
@@ -291,9 +294,7 @@ z-index: 20;
   flex-wrap: nowrap !important;
  }
 
- .test{
-  width: 40%;
- }
+ 
  
  #cast-container::-webkit-scrollbar {
   width: 4px;
@@ -346,6 +347,10 @@ z-index: 20;
   transition: 250ms;
 }
 
+.hover-blue:hover{
+  color: var(--info) !important;
+  transition: 100ms;
+}
  
 
 .menu-list a:hover .fa {
@@ -358,14 +363,17 @@ color: white !important;
     transition: 250ms;
   }
 
-  #movie-list select{
+  .select-menu select{
     background-color: transparent !important;
     color: white !important;
+    font-family:'Zen Dots', cursive !important;
+    font-size: 14px !important;
   }
 
-  #movie-list option{
+  .select-menu option{
     background-color: hsl(0, 0%, 7%) !important;
     font-family:'Zen Dots', cursive !important;
+    font-size: 14px;
   }
 
   .divider{
@@ -652,7 +660,17 @@ transition: 500ms !important;
    object-fit: cover !important;
  }
 
- 
+ .poster-image{
+  height: 225px;
+  border-radius: 4px;
+ }
+
+ .poster-image img{
+  width: 100%;
+ height: 100% !important;
+  transition: 0.2s;
+  object-fit: cover  ;
+ }
  
 
  .news .article figcaption {
@@ -828,6 +846,7 @@ height: 500px;
   width: 50% !important;
  }
 
+ 
 }
 
 

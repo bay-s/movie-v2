@@ -1,9 +1,9 @@
 export async function getLatestTvTrailer(movieId) {
- 
+  const api_key = process.env.NEXT_PUBLIC_API_KEY
     try {
-        const posters = await fetch(`https://api.themoviedb.org/3/tv/${movieId}?api_key=0ccbee0a69447c2b1bd0090bf76b0358`);
+        const posters = await fetch(`https://api.themoviedb.org/3/tv/${movieId}?api_key=${api_key}`);
 
-        const response = await fetch(`https://api.themoviedb.org/3/tv/${movieId}/videos?api_key=0ccbee0a69447c2b1bd0090bf76b0358`);
+        const response = await fetch(`https://api.themoviedb.org/3/tv/${movieId}/videos?api_key=${api_key}`);
 
         const videos = await response.json();
         const images = await posters.json()
