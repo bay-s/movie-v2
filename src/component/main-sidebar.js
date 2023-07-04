@@ -8,7 +8,8 @@ return(
 
   <section class="menu"  >
   <h3 class="is-size-5 is-title txt-white is-bold p-4 ">
-    My Movie App
+    {/* My Movie App */}
+    Movie Info List
   </h3>
 
   <ul class="menu-list">
