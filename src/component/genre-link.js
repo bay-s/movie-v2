@@ -18,7 +18,7 @@ const GenreLink = ({id,type}) => {
     return(
         genre?.map((item,index) => {
             return  <Fragment key={index}>
-           <Link href={`/genre/${item.id}`} className="txt-white txt-xmall">
+           <Link href={`/genre/${type}/${item.id}-${item?.name}`} className="txt-white txt-xmall">
             {item?.name}
             {index < genre.length - 1 && ", "}
             </Link>

@@ -246,6 +246,10 @@ body {
   /* background-image: linear-gradient(to right, rgba(52.5, 52.5, 73.5, 1) calc((50vw - 170px) - 340px), rgba(52.5, 52.5, 73.5, 0.84) 50%, rgba(52.5, 52.5, 73.5, 0.84) 100%); */
 }
  
+#banner-single a:hover{
+  color: rgba(255, 255, 255, 0.671) !important;
+  transition: 150ms ;
+}
 .banner-single-poster{
   height: 100%;
 }
@@ -472,106 +476,14 @@ color: var(--info) !important;
   height: 100% !important; 
 }
 
-.single-post-image span img{
-width: 100% !important;
-height: 100% !important;
-object-fit:cover !important;
-object-position: top center !important;
-}
-
-#about img{
-  border-radius: 8px;
-}
+ 
 
 .is-hover-link:hover{
   text-decoration: underline !important;
 }
  
-#single-post h2 , h3 ,h1 ,h4{
-  font-family:'Zen Dots', cursive !important;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-}
  
-#single-post{
-background-color: #151526;
-border-radius: 7px;
-padding: 20px;
-}
-
-#single-post .single-post-content{
-  word-wrap: break-word !important;
-}
-
-#single-post strong{
-  color: white;
-  font-weight: bold;
-}
-
-#single-post .lh-base{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#services{
-display: flex;
-flex-direction: column;
-gap: 25px;
-}
-
-#services h2{
-  font-family:'Zen Dots', cursive !important;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-#services strong{
-  color: white;
-  font-weight: bold;
-}
-
-.wp-block-columns{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 25px 0;
-}
-
-.wp-block-columns .wp-block-button__link{
-  padding-bottom: calc(0.5em - 1px);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: calc(0.5em - 1px);
-  text-align: center;
-  white-space: nowrap;
-  background-color: #485fc7;
-  border-color: transparent;
-  color: #fff;
-}
-
-.wp-block-columns ul li a{
-  display: flex !important;
-  align-items: center !important;
-  gap: 5px;
-}
-
-.wp-block-columns ul li svg{
-  color: white;
-}
-/* END SINGLE POST */
-
- /* SIDEBAR */
-#categories .menu-list a{
-  color: white;
-}
-
-
-#categories .menu-list a:hover {
-  background-color:rgba(255, 255, 255, 0.082) !important;
-}
-
+  
  /* END SIDEBAR */
 
  /* CONTACT */
@@ -689,7 +601,7 @@ transition: 500ms !important;
  }
 
  .news .article figcaption h3 {
-   font-size: 18px;
+   font-size: 15px;
    margin-bottom: 0;
    font-weight: bold;
  }

@@ -50,7 +50,7 @@ const AnimePages = () => {
     return(
         <div className="is-flex flex-column gap-4" id="movie-list">
     <ul className="is-flex justify-between align-center">
-      <li> <h3 className="is-title is-size-3 is-bold text-center">Anime</h3></li>
+      <li> <h3 className="is-title is-size-3 is-bold text-center txt-white">Anime</h3></li>
        <li>
   <SelectDataValue  setSelectValue={setSelectValue} />
        </li>
