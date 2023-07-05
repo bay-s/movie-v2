@@ -14,7 +14,8 @@ const HeaderSearchForm = () => {
   const submitSearch = (e) => {
     e.preventDefault()
     if(searchValue === ''){
-
+alert(":test")
+return
     }else{
       router.push(`/search?query=${encodeURIComponent(searchValue)}`);
     }
