@@ -4,9 +4,9 @@ import PersonPageSidebar from "@/component/person/person-sidebar";
 const PersonPages = ({ person}) => {
  console.log(person);
     return(
-    <div className="container p-3">
+ <div className="container p-3">
 
-<section className="columns is-multiline">
+<section className="columns is-multiline" id="person-page">
 
  <PersonPageSidebar person={person} />
  <PersonPageCenter person={person} />

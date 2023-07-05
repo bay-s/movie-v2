@@ -10,7 +10,7 @@ const SingleTvPage = ({data}) => {
     const pageName = router?.asPath?.split("/") 
      
     return(
-<section className="is-flex flex-column gap-4">
+<section className="is-flex flex-column gap-4" id="single-page">
  <BannerSinglePage movie={data} pageName={pageName[1]} />
 
 <section className="columns is-multiline gap-2">

@@ -11,7 +11,7 @@ const CrewHistoryCard = ({movies,year}) => {
                         <span className="txt-white txt-small">{year}</span>
                     </li>
                     <li className="is-flex flex-column">
-                        <Link href={`/movie/${movie.id}`} className="txt-white txt-small is-title">{movie?.name}</Link>
+                        <Link href={`/tv/${movie.id}`} className="txt-white txt-small is-title">{movie?.name}</Link>
                         <span className="txt-small has-text-grey-light">
                            ({movie?.episode_count} episode)...<strong className="txt-white px-2">{movie?.job}</strong></span>
                     </li>

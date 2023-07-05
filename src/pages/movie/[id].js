@@ -7,7 +7,7 @@ import CastCard from "@/component/cast/cast-card";
 const SingleMoviePage = ({data}) => {
  
     return(
-     <section className="is-flex flex-column gap-4">
+<section className="is-flex flex-column gap-4" id="single-page">
         <BannerSinglePage movie={data} />
 
 <section className="columns is-multiline gap-2">

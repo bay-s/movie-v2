@@ -700,3 +700,26 @@ END Z - INDEX
   ==============
   */
   
+
+
+  /* START RESPONSIVE */
+
+  
+@media screen and (max-width:370px){
+ 
+    
+    .txt-small{
+      font-size: 12px !important;
+    }
+
+     a .txt-small{
+        font-size: 12px !important;
+     }
+
+     .is-size-3{
+        font-size: 18px !important;
+     }
+    }
+    
+
+  /* END RESPONSIVE */

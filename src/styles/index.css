@@ -823,7 +823,47 @@ height: 500px;
   width: 50% !important;
  }
 
+ #main-pages .container{
+  padding: 1px !important;
+ }
+
+ #person-page .is-8{
+  padding: 5px !important;
+ }
+
+ #person-page .is-8 ul li a{
+  font-size: 12px !important;
+ }
+
+ #person-page .is-8 ul li span{
+  font-size: 12px !important;
+ }
+
+ #page-container{
+  /* margin-top: 35px; */
+  margin: 1px 14px 0 0;
+  }
+  
  
+}
+
+
+@media screen and (max-width:370px){
+#single-page .is-one-third-mobile{
+  width: 50%;
+}
+
+.txt-small{
+  font-size: 1px !important;
+}
+
+#main-pages .is-one-third-mobile{
+  width: 50%;
+}
+
+#banner .column{
+  padding: 2 !important;
+}
 }
 
 
