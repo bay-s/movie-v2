@@ -18,7 +18,7 @@ const BannerSinglePage = ({movie,pageName}) => {
   };
 
   const poster = `https://image.tmdb.org/t/p/w500/${movie?.poster_path}`
-
+  const noImg = '/img/no-image.png'
 return (
 <article className="is-flex flex-column fade" id="banner-single" style={bannerStyle}>
 
@@ -26,8 +26,8 @@ return (
  <div className="column is-4">
  <figure className="banner-single-poster">
 <Image
-loader={() => poster}
-src={poster }
+loader={() => !movie?.poster_path ? noImg : poster}
+src={ !movie?.poster_path ? noImg : poster}
 width={500}
 height={500}
 alt="Image description"   

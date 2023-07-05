@@ -722,6 +722,13 @@ height: 500px;
  
   #main-sidebar{
     transform: translateX(-200px);
+    transition: 250ms;
+    z-index: 100;
+  }
+
+  .open-sidebar{
+    transform: translateX(0) !important;
+    transition: 250ms;
   }
 
   #main-page{

@@ -6,13 +6,14 @@ import Link from "next/link";
 const PopularTvCard = ({tv}) => {
   const images = `https://image.tmdb.org/t/p/w500/${tv?.poster_path}`
   const rating = parseFloat(tv?.vote_average.toFixed(1));
+  const noImg = '/img/no-image.png'
 return(
 <div className="column p-2 fade is-one-third-mobile is-4-tablet is-3-desktop " key={tv?.id}> 
 <figure class="article ">
 
 <Image
-loader={() => images}
-src={images}
+loader={() => !tv?.poster_path ? noImg : images}
+src={!tv?.poster_path ?  noImg : images}
 width={400}
 height={250}
 alt="Image description"   

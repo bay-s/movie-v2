@@ -1,10 +1,10 @@
 import Link from "next/link"
 import SidebarDropdown from "./main-sidebar-dropdown"
 
-const MainSidebar = () => {
+const MainSidebar = ({sidebar}) => {
 
 return(
-<aside className=" has-background-black" id="main-sidebar">
+<aside className=" has-background-black" id="main-sidebar" ref={sidebar} >
 
   <section class="menu"  >
   <h3 class="is-size-5 is-title txt-white is-bold p-4 ">

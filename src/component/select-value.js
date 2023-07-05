@@ -9,8 +9,8 @@ const SelectDataValue = ({setSelectValue,type}) => {
     return(
 <div class="select is-primary select-menu">
   <select className="no-bg" onChange={handlerSelectValue}>
-    <option value='tv'>{type === 'anime' ? "On Tv" : "Today"}</option>
-    <option value='movie'>{type === 'anime' ? "Movie" : "This Week"}</option>
+    <option value='tv'>{type === "" || type === 'anime' ? "On Tv" : "Today"}</option>
+    <option value='movie'>{type === "" || type === 'anime' ? "Movie" : "This Week"}</option>
   </select>
 </div>
     )

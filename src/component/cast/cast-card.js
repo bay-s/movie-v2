@@ -24,8 +24,7 @@ const CastCard  = ({id,type}) => {
         getCasts()
     },[id])
 
-    console.log(casts);
-    console.log(casts?.length);
+ 
     return(
     casts?.slice(0,30).map(cast => {
      const img =  `https://image.tmdb.org/t/p/w500/${cast?.profile_path}`

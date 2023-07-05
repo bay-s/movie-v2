@@ -11,10 +11,10 @@ const LoadMore = ({page,setPage}) => {
     }
  
     return(
-      <div className="w-100 my-3">
+      <div className="w-100 my-3 ">
       {
-           value.isLoading ? <button className="button is-primary is-loading" disabled>Load More</button>
-           : <button className="button is-primary" onClick={loadMorePage}>Load More</button>
+           value.isLoading ? <button className="button is-primary is-loading w-100" disabled>Load More</button>
+           : <button className="button is-primary w-100" onClick={loadMorePage}>Load More</button>
       }
     </div>
     )

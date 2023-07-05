@@ -19,6 +19,7 @@ const LoadMoar = ({selectValue,dataMovie,setDataMovie}) => {
             setDataMovie({...dataMovie,
               pageMovie:dataMovie.pageMovie + 1
             })
+     
           }
     }
  
