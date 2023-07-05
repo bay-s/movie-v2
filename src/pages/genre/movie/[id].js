@@ -8,8 +8,8 @@ import { useContext, useEffect, useState } from "react";
 const  GenreMoviePage = ( ) => {
     const value = useContext(ValueContext)
      const route = useRouter()
-     const pageName = route.query.id.split("-")[1]
-     const genreId =  route.query.id.split("-")[0]
+     const pageName = route?.query?.id?.split("-")[1]
+     const genreId =  route?.query?.id?.split("-")[0]
      const [dataMovie,setDataMovie] = useState({
         pageMovie:1,
         movie:[],
@@ -48,7 +48,7 @@ const  GenreMoviePage = ( ) => {
         <h3 className="is-title is-bold txt-white is-size-4">{dataMovie?.total_results.toLocaleString()} shows</h3>
     </div>
 
-<SelectGenrePages pages={route.query.id.split("-")} />
+<SelectGenrePages pages={route?.query?.id?.split("-")} />
        <article className="columns is-multiline news is-flex-mobile">
         {
             dataMovie.movie?.map(movie => {

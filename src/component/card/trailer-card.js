@@ -37,7 +37,7 @@ const TrailerCard = ({trailer,images,type}) => {
   const title =  type === 'tv' ? images[index]?.name
   : images[index]?.title
    return(
-<div className={`column fade is-one-third-mobile is-4-tablet is-3 ${noImage ? 'hide' : ''}`} key={images[index].id}>
+<div className={`column fade is-one-third-mobile is-4-tablet is-3 ${noImage ? 'hide' : ''}`} key={images[index]?.id}>
            <div class="card trailer-card no-bg">
                <figure class="image is-4by3">
                <Image

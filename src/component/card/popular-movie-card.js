@@ -31,7 +31,7 @@ alt="Image description"
  <li><GenreLink id={movie?.id} type='movie' /></li>
 </ul>
 
-<p className="txt-xmall">Release Date: <strong className="txt-white txt-xmall">{movie?.release_date}</strong></p>
+<p className="txt-xmall dates">Release Date: <strong className="txt-white txt-xmall">{movie?.release_date}</strong></p>
 <p className="star-container">
   <span className="is-title is-bold">{rating}</span>
 </p>

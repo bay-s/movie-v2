@@ -768,6 +768,19 @@ height: 500px;
     height: 450px;
   }
 
+  .star-container{
+    display: none;
+  }
+
+  .dates{
+    display: none;
+  }
+
+
+  .news .article figcaption h3 {
+    font-size: 12px;
+  }
+ 
 }
 
 
@@ -778,6 +791,9 @@ height: 500px;
  
   }
 
+  #banner-single h1{
+    font-size: 18px !important;
+  }
 }
 
 @media screen and (max-width:770px){

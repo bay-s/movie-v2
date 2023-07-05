@@ -8,8 +8,9 @@ import { useContext, useEffect, useState } from "react"
 const GenreTvPAge = ({}) => {
     const value = useContext(ValueContext)
      const route = useRouter()
-     const pageName = route.query.id.split("-")[1]
-      
+     const pageName = route?.query?.id?.split("-")[1]
+     const genreId =  route?.query?.id?.split("-")[0]
+     
      const [dataMovie,setDataMovie] = useState({
         pageMovie:1,
         movie:[],
@@ -19,7 +20,7 @@ const GenreTvPAge = ({}) => {
       
       const getMovieByGenre = async () => {
         const api_key = process.env.NEXT_PUBLIC_API_KEY
-          const genreId =  route.query.id.split("-")[0]
+          
        try {
          const responseMovie =  await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${api_key}&with_genres=${genreId}&page=${dataMovie.pageMovie}`)
          const dataMovies = await responseMovie.json()
@@ -38,7 +39,7 @@ const GenreTvPAge = ({}) => {
   
     useEffect(() => {
       getMovieByGenre()
-    },[dataMovie.pageMovie,route.query.id.split("-")[0]])
+    },[dataMovie.pageMovie,genreId])
   
     return(
 <section className="is-flex flex-column gap-3">
@@ -48,7 +49,7 @@ const GenreTvPAge = ({}) => {
         <h3 className="is-title is-bold txt-white is-size-4">{dataMovie?.total_results.toLocaleString()} shows</h3>
     </div>
 
-    <SelectGenrePages pages={route.query.id.split("-")} />
+    <SelectGenrePages pages={route?.query?.id?.split("-")} />
 
        <article className="columns is-multiline news is-flex-mobile">
         {

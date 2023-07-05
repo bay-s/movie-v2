@@ -27,15 +27,6 @@ return(
    </a>
   </Link>
     </li>
-
-    <li>
-  <Link href='https://developer.themoviedb.org/reference/intro/getting-started' legacyBehavior>
-  <a target="_blank" className="is-flex align-center gap-2" rel="noopener noreferrer">
-  <i class="fa fa-imdb has-text-grey-light" aria-hidden="true"></i>
-<span className="has-text-grey-light">TMDB Api</span>
-   </a>
-  </Link>
-    </li>
     {/* <li>
   <a className="is-flex align-center gap-2">
 <i class="fa fa-heart has-text-grey-light" aria-hidden="true"></i>
@@ -68,6 +59,14 @@ return(
  <li>
 <SidebarDropdown />
 </li>
+<li>
+  <Link href='https://developer.themoviedb.org/reference/intro/getting-started' legacyBehavior>
+  <a target="_blank" className="is-flex align-center gap-2" rel="noopener noreferrer">
+  <i class="fa fa-imdb has-text-grey-light" aria-hidden="true"></i>
+<span className="has-text-grey-light">TMDB Api</span>
+   </a>
+  </Link>
+    </li>
   </ul>
 
  
