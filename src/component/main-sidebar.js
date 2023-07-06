@@ -16,7 +16,7 @@ return(
     <li>
     <Link href={`/`} className="is-flex align-center gap-2">
   <i class="fa fa-home has-text-grey-light" aria-hidden="true"></i>
-<span className="has-text-grey-light">Home</span>
+<span className="has-text-grey-light txt-small">Home</span>
   </Link>
     </li>
     <li>

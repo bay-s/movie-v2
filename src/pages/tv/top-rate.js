@@ -1,7 +1,7 @@
-import LoadMoar from "@/component/load-more-button";
 import PopularTvCard from "@/component/card/popular-tv-card";
 import { useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context";
+import LoadMore from "@/component/load-moar-button";
 
  
 const TopRateTvPage = ( ) => {
@@ -39,7 +39,7 @@ const TopRateTvPage = ( ) => {
             })
         }
        </article>
-       <LoadMoar  setPage={setPage} page={page}/>
+       <LoadMore  setPage={setPage} page={page}/>
      </section>
     )
 }

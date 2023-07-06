@@ -27,7 +27,7 @@ return
           <span class="icon is-small is-left">
             <i class="fa fa-check fa-xs"></i>
           </span>
-          <button class="icon is-small is-right no-bg no-border mt-1">
+          <button class="icon is-small is-right no-bg no-border ">
             <i class="fa fa-search fa-xs txt-white is-clickable is-bold" ></i>
           </button>
         </div>

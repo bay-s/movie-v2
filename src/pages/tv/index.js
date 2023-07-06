@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context";
-import LoadMoar from "@/component/load-more-button";
 import PopularTvCard from "@/component/card/popular-tv-card";
+import LoadMore from "@/component/load-moar-button";
 
  
  
@@ -28,6 +28,7 @@ const PopularTvPage = ( ) => {
   useEffect(() => {
     fetchPopularTVSeries()
   },[page])
+
     return(
      <section className="is-flex flex-column gap-4">
        <h3 className="is-title">Popular Tv Series</h3>
@@ -38,7 +39,7 @@ const PopularTvPage = ( ) => {
             })
         }
        </article>
-       <LoadMoar  setPage={setPage} page={page}/>
+       <LoadMore  setPage={setPage} page={page}/>
      </section>
     )
 }

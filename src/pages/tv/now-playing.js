@@ -1,7 +1,7 @@
 import PopularTvCard from "@/component/card/popular-tv-card";
 import { useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context";
-import LoadMoar from "@/component/load-more-button";
+import LoadMore from "@/component/load-moar-button";
 
  
  
@@ -40,7 +40,7 @@ const TvNowPlayingPage = ( ) => {
             })
         }
        </article>
-       <LoadMoar  setPage={setPage} page={page}/>
+       <LoadMore  setPage={setPage} page={page}/>
      </section>
     )
 }

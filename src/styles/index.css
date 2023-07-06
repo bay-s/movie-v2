@@ -210,14 +210,15 @@ textarea {
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Didact+Gothic&family=Frank+Ruhl+Libre:wght@600&family=Ibarra+Real+Nova:ital@1&family=Noto+Sans:wght@500&family=Outfit:wght@300&family=Pacifico&family=Poppins:wght@200&family=Square+Peg&family=Tangerine&family=Zen+Dots&display=swap");
 
 body {
-  /* font-family: "Poppins", sans-serif !important; */
+  font-family: "Poppins", sans-serif !important;
   /* font-family: 'Montserrat', sans-serif !important;  */
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
 }
 
 .is-title {
   /* font-family:'Zen Dots', cursive !important; */
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Noto Sans", sans-serif !important;
+  /* font-family: 'Montserrat', sans-serif !important; */
 }
 
 .bg-green{
@@ -373,13 +374,11 @@ color: white !important;
   .select-menu select{
     background-color: transparent !important;
     color: white !important;
-    font-family:'Zen Dots', cursive !important;
     font-size: 14px !important;
   }
 
   .select-menu option{
     background-color: hsl(0, 0%, 7%) !important;
-    font-family:'Zen Dots', cursive !important;
     font-size: 14px;
   }
 
