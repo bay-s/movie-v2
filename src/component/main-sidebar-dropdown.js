@@ -21,17 +21,17 @@ return(
 <ul class="sidebar-dropdown-list no-border p-0 m-0">
 <li>
   <Link href={`/tv`} className="is-flex align-center gap-2 px-5">
-<span className="has-text-grey-light">Popular</span>
+<span className="has-text-grey-light  txt-xmall">Popular</span>
   </Link>
     </li>
 <li>
 <Link href={`/tv/now-playing`} className="is-flex align-center gap-2 px-5">
-<span className="has-text-grey-light">Now Playing</span>
+<span className="has-text-grey-light  txt-xmall">Now Playing</span>
   </Link>
 </li>
 <li>
 <Link href={`/tv/top-rate`} className="is-flex align-center gap-2 px-5">
-<span className="has-text-grey-light">Top Rate</span>
+<span className="has-text-grey-light  txt-xmall">Top Rate</span>
   </Link>
 </li>
 </ul>

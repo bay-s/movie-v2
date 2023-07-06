@@ -212,13 +212,12 @@ textarea {
 body {
   /* font-family: "Poppins", sans-serif !important; */
   /* font-family: 'Montserrat', sans-serif !important;  */
-
   font-family: 'Inter', sans-serif;
 }
 
 .is-title {
-  font-family:'Zen Dots', cursive !important;
- 
+  /* font-family:'Zen Dots', cursive !important; */
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .bg-green{
@@ -860,10 +859,7 @@ height: 500px;
   width: 50%;
 }
 
-.txt-small{
-  font-size: 1px !important;
-}
-
+ 
 #main-pages .is-one-third-mobile{
   width: 50%;
 }
@@ -871,6 +867,7 @@ height: 500px;
 #banner .column{
   padding: 2 !important;
 }
+
 }
 
 

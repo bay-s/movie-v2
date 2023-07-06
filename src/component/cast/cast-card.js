@@ -30,7 +30,7 @@ const CastCard  = ({id,type}) => {
      const img =  `https://image.tmdb.org/t/p/w500/${cast?.profile_path}`
  
         return (
- <div className="column is-3 is-one-third-mobile  p-2">
+ <Link  href={`/person/${cast?.id}`}  className="column is-3 is-one-third-mobile  p-2">
  
 <figure class="article">
 
@@ -57,7 +57,7 @@ alt="Image description"
 </figcaption>
 
 </figure>
-            </div>
+            </Link>
         )
     })
     )

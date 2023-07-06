@@ -8,7 +8,7 @@ const PopularTvCard = ({tv}) => {
   const rating = parseFloat(tv?.vote_average.toFixed(1));
   const noImg = '/img/no-image.png'
 return(
-<div className="column p-2 fade is-one-third-mobile is-4-tablet is-3-desktop " key={tv?.id}> 
+<Link href={`/tv/${tv?.id}`}  className="column p-2 fade is-one-third-mobile is-4-tablet is-3-desktop " key={tv?.id}> 
 <figure class="article ">
 
 <Image
@@ -41,7 +41,7 @@ alt="Image description"
 </figcaption>
 
 </figure>
-</div>
+</Link>
 
 
 )

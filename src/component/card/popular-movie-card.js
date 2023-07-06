@@ -9,7 +9,7 @@ const PopularMovieCard = ({movie}) => {
   const noImg = '/img/no-image.png'
   console.log(!movie?.poster_path);
 return(
-<div className="column p-2 fade is-one-third-mobile is-4-tablet is-3-desktop " key={movie?.id}> 
+<Link href={`/movie/${movie?.id}`} className="column p-2 fade is-one-third-mobile is-4-tablet is-3-desktop " key={movie?.id}> 
 <figure class="article ">
 
 <Image
@@ -41,7 +41,7 @@ alt="Image description"
 </figcaption>
 
 </figure>
-</div>
+</Link>
 
 
 )

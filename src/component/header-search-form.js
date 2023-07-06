@@ -23,7 +23,7 @@ return
     return(
         <form class="field" onSubmit={submitSearch}>
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-primary no-bg txt-white" name="search" type="text" placeholder="Search movie or tv series" onChange={handlerSearch}/>
+          <input class="input is-primary no-bg txt-white is-small" name="search" type="text" placeholder="Search movie or tv series" onChange={handlerSearch}/>
           <span class="icon is-small is-left">
             <i class="fa fa-check fa-xs"></i>
           </span>

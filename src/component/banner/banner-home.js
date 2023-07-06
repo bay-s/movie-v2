@@ -44,7 +44,7 @@ const BannerHome = () => {
 <div className="my-auto is-flex flex-column align-start ">
   <h1 className="title is-3 is-title is-bold txt-white">{banner[movieIndex]?.original_title}</h1>
 
-  <BannerHomeRating banner={banner[movieIndex]} />
+ <BannerHomeRating banner={banner[movieIndex]} />
  <BannerHomeCarousel banner={banner[movieIndex]} values={values} />
 
  </div>

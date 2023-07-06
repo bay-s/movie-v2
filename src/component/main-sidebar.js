@@ -23,7 +23,7 @@ return(
     <Link href='https://github.com/bay-s/movie-v2' legacyBehavior>
   <a target="_blank" className="is-flex align-center gap-2" rel="noopener noreferrer">
   <i class="fa fa-github has-text-grey-light" aria-hidden="true"></i>
-<span className="has-text-grey-light">Github</span>
+<span className="has-text-grey-light txt-small">Github</span>
    </a>
   </Link>
     </li>
@@ -63,7 +63,7 @@ return(
   <Link href='https://developer.themoviedb.org/reference/intro/getting-started' legacyBehavior>
   <a target="_blank" className="is-flex align-center gap-2" rel="noopener noreferrer">
   <i class="fa fa-imdb has-text-grey-light" aria-hidden="true"></i>
-<span className="has-text-grey-light">TMDB Api</span>
+<span className="has-text-grey-light txt-small">TMDB Api</span>
    </a>
   </Link>
     </li>

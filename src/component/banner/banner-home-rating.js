@@ -1,5 +1,6 @@
-const { default: Image } = require("next/image")
+import WatchSingleTrailerButton from "../watch-single-trailer"
 
+const { default: Image } = require("next/image")
 
 
 const BannerHomeRating = ({banner}) => {
@@ -20,7 +21,7 @@ const BannerHomeRating = ({banner}) => {
     <span className="is-title is-bold">{banner?.vote_average}</span>
         </li>
     <li>
-    <button className="button is-danger is-small is-rounded">Watch Trailer</button>
+    <WatchSingleTrailerButton id={banner?.id} type='movie' />
     </li>
 </ul>
     )
