@@ -1,7 +1,8 @@
 import PopularTvCard from "@/component/card/popular-tv-card";
-import { useContext, useEffect, useState } from "react"
+import { Fragment, useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context";
 import LoadMore from "@/component/load-moar-button";
+import MetaHead from "@/lib/meta-head";
 
  
 const TopRateTvPage = ( ) => {
@@ -30,17 +31,21 @@ const TopRateTvPage = ( ) => {
 
  
     return(
-     <section className="is-flex flex-column gap-3">
-       <h3 className="is-title">Top Rated Tv Series</h3>
-       <article className="columns is-multiline news is-flex-mobile">
-        {
-            series?.map(tv => {
-                return <PopularTvCard tv={tv} />
-            })
-        }
-       </article>
-       <LoadMore  setPage={setPage} page={page}/>
-     </section>
+<Fragment>
+<MetaHead title='Top Rate' desc="Top Rate Pages" />
+
+<section className="is-flex flex-column gap-3">
+  <h3 className="is-title">Top Rated Tv Series</h3>
+  <article className="columns is-multiline news is-flex-mobile">
+   {
+       series?.map(tv => {
+           return <PopularTvCard tv={tv} />
+       })
+   }
+  </article>
+  <LoadMore  setPage={setPage} page={page}/>
+</section>
+</Fragment>
     )
 }
 

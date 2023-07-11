@@ -1,7 +1,8 @@
 import BannerHome from "@/component/banner/banner-home"
 import MoviePopularList from "../component/movie-popular-list"
 import MoviePopularTrailer from "@/component/movie-popular-trailer"
-import { useState } from "react"
+import { Fragment, useState } from "react"
+import MetaHead from "@/lib/meta-head"
  
 
 const HomePage = ({data}) => {
@@ -13,11 +14,16 @@ const HomePage = ({data}) => {
   }
  
     return(
+<Fragment>
+  <MetaHead title='Movie Info List' desc='Movie and Tv info list' />
+  
 <div className="is-flex flex-column gap-4">
 <BannerHome /> 
 <MoviePopularList data={data} selectValue={selectValue} handlerSelectValue={handlerSelectValue}/>
 <MoviePopularTrailer  data={data} selectValue={selectValue} handlerSelectValue={handlerSelectValue} />
 </div>
+
+</Fragment>
     )
 }
 

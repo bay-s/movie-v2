@@ -1,7 +1,8 @@
 import PopularTvCard from "@/component/card/popular-tv-card";
-import { useContext, useEffect, useState } from "react"
+import { Fragment, useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context";
 import LoadMore from "@/component/load-moar-button";
+import MetaHead from "@/lib/meta-head";
 
  
  
@@ -31,17 +32,22 @@ const TvNowPlayingPage = ( ) => {
   },[page])
   console.log(value);
     return(
-     <section className="is-flex flex-column gap-4">
-       <h3 className="is-title">Now Playing Tv Series</h3>
-       <article className="columns is-multiline news is-flex-mobile">
-        {
-            series?.map(tv => {
-                return <PopularTvCard tv={tv} />
-            })
-        }
-       </article>
-       <LoadMore  setPage={setPage} page={page}/>
-     </section>
+<Fragment>
+<MetaHead title='Now Playing' desc="Now Playing" />
+
+<section className="is-flex flex-column gap-4">
+  <h3 className="is-title">Now Playing Tv Series</h3>
+  <article className="columns is-multiline news is-flex-mobile">
+   {
+       series?.map(tv => {
+           return <PopularTvCard tv={tv} />
+       })
+   }
+  </article>
+  <LoadMore  setPage={setPage} page={page}/>
+</section>
+
+</Fragment>
     )
 }
 

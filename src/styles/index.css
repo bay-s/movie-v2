@@ -765,6 +765,9 @@ height: 500px;
     width:550px !important;
   }
 
+  .search-title h3{
+    font-size: 18px !important;
+  }
 }
 
 @media screen and (max-width:580px){
@@ -847,13 +850,10 @@ height: 500px;
 
  #page-container{
   /* margin-top: 35px; */
-  margin: 1px 14px 0 0;
+  margin: 10px 14px 0 0;
   }
   
-  .test{
-    color: white;
-  }
- 
+
 }
 
 
@@ -869,6 +869,10 @@ height: 500px;
 
 #banner .column{
   padding: 2 !important;
+}
+
+.search-title h3{
+  font-size: 16px !important;
 }
 
 }

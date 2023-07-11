@@ -1,7 +1,8 @@
-import { useContext, useEffect, useState } from "react"
+import { Fragment, useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context";
 import PopularTvCard from "@/component/card/popular-tv-card";
 import LoadMore from "@/component/load-moar-button";
+import MetaHead from "@/lib/meta-head";
 
  
  
@@ -30,17 +31,21 @@ const PopularTvPage = ( ) => {
   },[page])
 
     return(
-     <section className="is-flex flex-column gap-4">
-       <h3 className="is-title">Popular Tv Series</h3>
-       <article className="columns is-multiline news is-flex-mobile">
-        {
-            series?.map(tv => {
-                return <PopularTvCard tv={tv} />
-            })
-        }
-       </article>
-       <LoadMore  setPage={setPage} page={page}/>
-     </section>
+<Fragment>
+<MetaHead title='Tv' desc="Tv pages" />
+
+<section className="is-flex flex-column gap-4">
+  <h3 className="is-title">Popular Tv Series</h3>
+  <article className="columns is-multiline news is-flex-mobile">
+   {
+       series?.map(tv => {
+           return <PopularTvCard tv={tv} />
+       })
+   }
+  </article>
+  <LoadMore  setPage={setPage} page={page}/>
+</section>
+</Fragment>
     )
 }
 

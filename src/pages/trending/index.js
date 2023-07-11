@@ -1,8 +1,9 @@
 import PopularMovieCard from "@/component/card/popular-movie-card"
 import LoadMoar from "@/component/load-more-button"
-import { useContext, useEffect, useState } from "react"
+import { Fragment, useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context"
 import SelectDataValue from "@/component/select-value"
+import MetaHead from "@/lib/meta-head"
 
 
 const TrendingPages = ( ) => {
@@ -46,29 +47,33 @@ value?.setIsLoading(false)
 
  
     return(
-   <div className="is-flex flex-column gap-4" id="movie-list">
-    <ul className="is-flex justify-between align-center">
-      <li> <h3 className="is-title is-size-3 is-bold text-center">Trending Movies</h3></li>
-       <li>
-       <SelectDataValue selectValue={selectValue} setSelectValue={setSelectValue} type='trending' />
-       </li>
-    </ul>
-    {/* MOVIE LIST COLUMNS */}
-     <article className="columns is-multiline news is-flex-mobile" >
-        {
-        selectValue === 'tv' ? dataMovie.tv?.map(movie => {
-            return <PopularMovieCard movie={movie}  />
-        }) 
-        : dataMovie.movie?.map(movie => {
-          return <PopularMovieCard movie={movie}  />
-      }) 
-       }  
- 
- <LoadMoar dataMovie={dataMovie} selectValue={selectValue} setDataMovie={setDataMovie} />
+<Fragment>
+<MetaHead title='Trending' desc={'Trending pages'} />
 
-        </article>
-    {/* END MOVIE LIST */}
+<div className="is-flex flex-column gap-4" id="movie-list">
+ <ul className="is-flex justify-between align-center  ">
+   <li> <h3 className="is-title is-size-3 is-bold text-center">Trending Movies</h3></li>
+    <li>
+    <SelectDataValue selectValue={selectValue} setSelectValue={setSelectValue} type='trending' />
+    </li>
+ </ul>
+ {/* MOVIE LIST COLUMNS */}
+  <article className="columns is-multiline news is-flex-mobile" >
+     {
+     selectValue === 'tv' ? dataMovie.tv?.map(movie => {
+         return <PopularMovieCard movie={movie}  />
+     }) 
+     : dataMovie.movie?.map(movie => {
+       return <PopularMovieCard movie={movie}  />
+   }) 
+    }  
+
+<LoadMoar dataMovie={dataMovie} selectValue={selectValue} setDataMovie={setDataMovie} />
+
+     </article>
+ {/* END MOVIE LIST */}
 </div>
+</Fragment>
     )
 }
 

@@ -2,14 +2,19 @@ import BannerSidebar from "@/component/banner/banner-sidebar";
 import BannerSinglePage from "@/component/banner/banner-single-page";
 import RecomendMovieCard from "@/component/card/movie-recomend-card";
 import CastCard from "@/component/cast/cast-card";
+import MetaHead from "@/lib/meta-head";
+import { Fragment } from "react";
  
 
 const SingleMoviePage = ({data}) => {
  
     return(
-<section className="is-flex flex-column gap-4" id="single-page">
-        <BannerSinglePage movie={data} />
+<Fragment>
 
+<MetaHead title={data?.title} desc={data?.overview} />
+
+<section className="is-flex flex-column gap-4" id="single-page">
+  <BannerSinglePage movie={data} />
 <section className="columns is-multiline gap-2">
   <div className="column is-flex flex-column gap-2">
      <h3 className="is-title is-size-3 is-bold">Cast</h3>
@@ -22,8 +27,9 @@ const SingleMoviePage = ({data}) => {
 <BannerSidebar data={data} type='movie'/>
 </section>
 
- 
-     </section>
+ </section>
+
+</Fragment>
     )
 }
 

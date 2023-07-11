@@ -1,10 +1,14 @@
 import PersonPageCenter from "@/component/person/person-main-content";
 import PersonPageSidebar from "@/component/person/person-sidebar";
+import MetaHead from "@/lib/meta-head";
+import { Fragment } from "react";
 
 const PersonPages = ({ person}) => {
  console.log(person);
     return(
- <div className="container p-3">
+<Fragment>
+    <MetaHead title={person?.name} desc={person?.biography} />
+<div className="container p-3">
 
 <section className="columns is-multiline" id="person-page">
 
@@ -14,6 +18,8 @@ const PersonPages = ({ person}) => {
 </section>
 
     </div>
+
+</Fragment>
     )
 }
 

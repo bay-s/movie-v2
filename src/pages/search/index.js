@@ -1,10 +1,11 @@
 import { useRouter } from "next/router";
-import { useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { ValueContext } from "../value-context";
 import PopularTvCard from "@/component/card/popular-tv-card";
 import PopularMovieCard from "@/component/card/popular-movie-card";
 import LoadMoar from "@/component/load-more-button";
 import SelectDataValue from "@/component/select-value";
+import MetaHead from "@/lib/meta-head";
  
 
 
@@ -54,13 +55,14 @@ const SearchPage = ({result}) => {
    console.log(data);
    const total = data?.movie_result + data.tv_result
     return(
-        <section className="is-flex flex-column gap-4" id="movie-list">
+<Fragment>
+    <MetaHead title='Search' desc='Search pages' />
+<section className="is-flex flex-column gap-4" id="movie-list">
 
-<div className="is-flex justify-between align-center">
+<div className="is-flex justify-between align-center search-title ">
     <h3 className="is-title is-size-4">Search result for: <strong className="is-bold txt-white px-2">{query}</strong></h3>
-    
     <ul className="is-flex align-center gap-1">
-        <li><h3 className="is-title is-size-4">Total Result : {total.toLocaleString()}</h3></li>
+        <li><h3 className="is-title is-size-4 is-hidden-mobile">Total Result : {total.toLocaleString()}</h3></li>
         <li><SelectDataValue  setSelectValue={setSelectValue} type=''/></li>
     </ul>
 </div>
@@ -83,6 +85,7 @@ const SearchPage = ({result}) => {
  </article>
 
         </section>
+</Fragment>
     )
 }
 

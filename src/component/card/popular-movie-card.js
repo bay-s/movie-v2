@@ -1,15 +1,22 @@
 import GenreLink from "@/component/genre-link";
 import Image from "next/image"
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 const PopularMovieCard = ({movie}) => {
   const images = `https://image.tmdb.org/t/p/w500/${movie?.poster_path}`
   const rating = parseFloat(movie?.vote_average?.toFixed(1));
   const noImg = '/img/no-image.png'
-  console.log(!movie?.poster_path);
+  const router = useRouter()
+
+  const movePage = (e) => {
+    e.preventDefault()
+    // href={`/movie/${movie?.id}`}
+    router.push(`/movie/${movie?.id}`)
+  }
 return(
-<Link href={`/movie/${movie?.id}`} className="column p-2 fade is-one-third-mobile is-4-tablet is-3-desktop " key={movie?.id}> 
+<article  className="column p-2 fade is-one-third-mobile is-4-tablet is-3-desktop " key={movie?.id}> 
 <figure class="article ">
 
 <Image
@@ -41,9 +48,7 @@ alt="Image description"
 </figcaption>
 
 </figure>
-</Link>
-
-
+</article>
 )
 }
 

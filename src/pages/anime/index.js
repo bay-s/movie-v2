@@ -1,9 +1,10 @@
 import PopularMovieCard from "@/component/card/popular-movie-card"
 import PopularTvCard from "@/component/card/popular-tv-card"
 import LoadMoar from "@/component/load-more-button"
-import { useContext, useEffect, useState } from "react"
+import { Fragment, useContext, useEffect, useState } from "react"
 import { ValueContext } from "../value-context"
 import SelectDataValue from "@/component/select-value"
+import MetaHead from "@/lib/meta-head"
 
 
 const AnimePages = () => {
@@ -48,11 +49,13 @@ const AnimePages = () => {
 
  
     return(
+<Fragment>
+<MetaHead title="Anime" desc='Anime pages' />
         <div className="is-flex flex-column gap-4" id="movie-list">
     <ul className="is-flex justify-between align-center">
       <li> <h3 className="is-title is-size-3 is-bold text-center txt-white">Anime</h3></li>
        <li>
-  <SelectDataValue  setSelectValue={setSelectValue} />
+  <SelectDataValue  setSelectValue={setSelectValue} type='anime' />
        </li>
     </ul>
     {/* MOVIE LIST COLUMNS */}
@@ -64,13 +67,14 @@ const AnimePages = () => {
         }) 
         : dataMovie?.movie?.map(movie => {
           return <PopularMovieCard movie={movie}  />
-      }) 
+         }) 
        }  
  
       <LoadMoar dataMovie={dataMovie} selectValue={selectValue} setDataMovie={setDataMovie} />
         </article>
     {/* END MOVIE LIST */}
       </div>
+</Fragment>
     )
 }
 

@@ -2,7 +2,9 @@ import BannerSidebar from "@/component/banner/banner-sidebar";
 import BannerSinglePage from "@/component/banner/banner-single-page";
 import RecomendTvCard from "@/component/card/tv-recomend-card";
 import CastCard from "@/component/cast/cast-card";
+import MetaHead from "@/lib/meta-head";
 import { useRouter } from "next/router";
+import { Fragment } from "react";
 
  
 const SingleTvPage = ({data}) => {
@@ -10,6 +12,9 @@ const SingleTvPage = ({data}) => {
     const pageName = router?.asPath?.split("/") 
      
     return(
+<Fragment>
+<MetaHead title={data?.name} desc={data?.overview} />
+
 <section className="is-flex flex-column gap-4" id="single-page">
  <BannerSinglePage movie={data} pageName={pageName[1]} />
 
@@ -29,8 +34,9 @@ const SingleTvPage = ({data}) => {
   <BannerSidebar data={data} type='tv'/>
 </section>
 
- 
-     </section>
+ </section>
+
+</Fragment>
     )
 }
 
